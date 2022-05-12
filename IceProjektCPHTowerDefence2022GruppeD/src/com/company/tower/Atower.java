@@ -1,5 +1,7 @@
 package com.company.tower;
 
+import com.company.enemy.Enemy;
+
 public abstract class Atower implements Tower {
 
     private int damage;
@@ -16,12 +18,12 @@ public abstract class Atower implements Tower {
     }
 
     @Override
-    public void shootEnemy() {
-
+    public void shootEnemy(Enemy e) {
+        e.enemyTakeDamage(damage);
     }
 
     @Override
-    public void setDmg() {
-
+    public void setDmg(int damage) {
+        this.damage = damage;
     }
 }

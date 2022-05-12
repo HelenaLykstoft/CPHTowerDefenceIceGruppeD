@@ -7,7 +7,13 @@ public class Player {
     private int startBalance;
     private int currentBalance;
     private int updatedBalance;
-    public int currentHealth;
+    private int maxHealth;
+    private int currentHealth;
+
+    public Player (int health){
+        this.maxHealth = health;
+        this.currentHealth = health;
+    }
 
 
     public void getName(){
@@ -28,11 +34,11 @@ public class Player {
     public void getUpdatedBalance(){
 
     }
-    public void getHealth(){
-
+    public int getHealth(){
+        return this.currentHealth;
     }
-    public void setHealth(){
-
+    public void setHealth(int health){
+        this.currentHealth = health;
     }
     public void setName(){
 
@@ -51,6 +57,13 @@ public class Player {
     }
     public void setUpdatedBalance(){
 
+    }
+    public void takeDamage(int damage){
+        System.out.println("you took damage!");
+        this.currentHealth = this.currentHealth-damage;
+        if(this.currentHealth <= 0){
+            System.out.println("game over!");
+        }
     }
     //@Override
     //public String ToString();

@@ -11,8 +11,9 @@ public abstract class AEnemy implements Enemy {
     }
 
     @Override
-    public void moveEnemy() {
-
+    public void moveEnemy(int x,int y) {
+        this.x = x;
+        this.y = y;
     }
 
     @Override
@@ -28,7 +29,7 @@ public abstract class AEnemy implements Enemy {
     @Override
     public int checkIfEnemyIsInBase(int basex, int basey) {
         if (x == basex && y == basey){
-            return -1;
+            return 1;
         }
         return 0;
     }
