@@ -4,10 +4,10 @@ public class Player {
     private String name;
     private int currentScore;
     private int endScore;
-    private int health;
     private int startBalance;
     private int currentBalance;
     private int updatedBalance;
+    public int currentHealth;
 
 
     public void getName(){

@@ -1,6 +1,7 @@
 package com.company.IOs;
 
 public class DatabasePassword {
+
     public void createConnection(){
 
     }
