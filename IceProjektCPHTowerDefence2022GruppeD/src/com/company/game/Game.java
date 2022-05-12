@@ -60,7 +60,7 @@ public class Game {
         boolean quit = false;
         int menu;
 
-        do {
+        while (!quit) {
             menu = scan.nextInt();
             switch (menu) {
                 case 1:
@@ -89,7 +89,7 @@ public class Game {
                 default:
                     System.out.println("Invalid choice..");
             }
-        } while (!quit);
+        }
         System.out.println("You quit the menu!");
     }
 

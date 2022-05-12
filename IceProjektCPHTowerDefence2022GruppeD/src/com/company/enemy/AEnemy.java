@@ -6,6 +6,10 @@ public abstract class AEnemy implements Enemy {
     private int x;
     private int y;
 
+    public AEnemy(int health){
+        this.health = health;
+    }
+
     @Override
     public void moveEnemy() {
 
@@ -18,7 +22,7 @@ public abstract class AEnemy implements Enemy {
 
     @Override
     public void deathOfEnemy() {
-
+        System.out.println("im dead now");
     }
 
     @Override
@@ -27,5 +31,15 @@ public abstract class AEnemy implements Enemy {
             return -1;
         }
         return 0;
+    }
+
+    public void enemyTakeDamage(int damageNumber){
+        this.health = this.health -damageNumber;
+        if(this.health<=0){
+            deathOfEnemy();
+        }
+    }
+    public int getEnemyHealth(){
+        return this.health;
     }
 }
